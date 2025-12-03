@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Educativo Infantil - Aprende con Gabriela</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>🌟 Blog Educativo Infantil - Aprende con Gabriela 🌟</h1>
+    <nav>
+        <button onclick="mostrar('numeros')">🔢 Números</button>
+        <button onclick="mostrar('animales')">🐾 Animales</button>
+        <button onclick="mostrar('colores')">🎨 Colores</button>
+        <button onclick="mostrar('figuras')">🔷 Figuras</button>
+        <button onclick="mostrar('adivinanzas')">❓ Adivinanzas</button>
+        <button onclick="mostrar('figuras3x3')">🟩 Memorama</button>
+        <button onclick="mostrar('silabas-animales')">🔤 Une Sílabas</button>
+
+    </nav>
+</header>
+
+<!-- SECCIÓN ADIVINANZAS -->
+<section id="adivinanzas" class="seccion oculto">
+    <h2>❓ Adivinanzas</h2>
+    <div class="contenedor" id="adivinanzas-container">
+
+        <div class="tarjeta-adivinanza" data-img="img/pera.jpg">
+            <img src="img/pregunta.jpg" alt="Pregunta" class="tarjeta-img">
+            <p>Blanco por dentro, verde por fuera. Si quieres que te lo diga, espera. ¿Que soy?</p>
+        </div>
+
+        <div class="tarjeta-adivinanza" data-img="img/pez.jpg">
+            <img src="img/pregunta.jpg" alt="Pregunta" class="tarjeta-img">
+            <p>Soy pequeño y puedo nadar, vivo en ríos y en el mar. ¿Quién soy?</p>
+        </div>
+
+        <div class="tarjeta-adivinanza" data-img="img/jirafa.png">
+            <img src="img/pregunta.jpg" alt="Pregunta" class="tarjeta-img">
+            <p>Largo, largo, su cuello es y tiene manchas en la piel. Si te digo más, sabrás ¿Quién es?</p>
+        </div>
+
+        <div class="tarjeta-adivinanza" data-img="img/platano.jpg">
+            <img src="img/pregunta.jpg" alt="Pregunta" class="tarjeta-img">
+            <p>ORO PARECE PLATA NO ES ¿QUÉ ES?</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SECCIÓN FIGURAS 3x3 (MEMORAMA) -->
+<section id="figuras3x3" class="seccion oculto">
+    <h2>🟩 Memorama</h2>
+    <div class="contenedor" id="memorama">
+        <div class="tarjeta memoria" data-figura="estrella">❓</div>
+        <div class="tarjeta memoria" data-figura="corazon">❓</div>
+        <div class="tarjeta memoria" data-figura="triangulo">❓</div>
+        <div class="tarjeta memoria" data-figura="estrella">❓</div>
+        <div class="tarjeta memoria" data-figura="corazon">❓</div>
+        <div class="tarjeta memoria" data-figura="triangulo">❓</div>
+    </div>
+</section>
+
+
+<!-- SECCIÓN ANIMALES 5 PAREJAS -->
+<section id="silabas-animales" class="seccion oculto">
+    <h2>🦊 Une las sílabas de los animales</h2>
+    <div id="silabas-container">
+        <canvas id="lineas"></canvas> <!-- <-- Moved inside -->
+        <div class="columna" id="col-izq">
+            <div class="silaba" data-match="1">Ca</div>
+            <div class="silaba" data-match="2">Pe</div>
+            <div class="silaba" data-match="3">Ga</div>
+            <div class="silaba" data-match="4">Bu</div>
+            <div class="silaba" data-match="5">Va</div>
+        </div>
+        <div class="columna" id="col-der">
+            <div class="silaba" data-match="1">ballo <img src="img/caballo.jpg" width="50"></div>
+            <div class="silaba" data-match="2">rro <img src="img/perro.jpg" width="50"></div>
+            <div class="silaba" data-match="3">to <img src="img/gato.jpg" width="50"></div>
+            <div class="silaba" data-match="4">rro <img src="img/burro.avif" width="50"></div>
+            <div class="silaba" data-match="5">ca <img src="img/vaca.jpg" width="50"></div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- SECCIÓN NÚMEROS -->
+<section id="numeros" class="seccion">
+    <h2>🔢 Aprende los números</h2>
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num1')">1</button>
+            <audio id="num1" src="./sonidos/uno.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num2')">2</button>
+            <audio id="num2" src="sonidos/dos.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num3')">3</button>
+            <audio id="num3" src="sonidos/tres.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num4')">4</button>
+            <audio id="num4" src="sonidos/cuatro.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num5')">5</button>
+            <audio id="num5" src="sonidos/cinco.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num6')">6</button>
+            <audio id="num6" src="sonidos/seis.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num7')">7</button>
+            <audio id="num7" src="sonidos/siete.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num8')">8</button>
+            <audio id="num8" src="sonidos/ocho.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num9')">9</button>
+            <audio id="num9" src="sonidos/nueve.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <h3>¿Qué número es?</h3>
+            <button onclick="playSound('num10')">10</button>
+            <audio id="num10" src="sonidos/diez.mp3"></audio>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECCIÓN ANIMALES -->
+<section id="animales" class="seccion oculto">
+    <h2>🐾 Animales</h2>
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <img src="img/vaca.jpg" alt="vaca">
+            <button onclick="playSound('vaca')">¿Qué animal es?</button>
+            <audio id="vaca" src="sonidos/vaca.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/gallina.jpg" alt="gallina">
+            <button onclick="playSound('gallina')">¿Qué animal es?</button>
+            <audio id="gallina" src="sonidos/gallina.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/caballo.jpg" alt="caballo">
+            <button onclick="playSound('caballo')">¿Qué animal es?</button>
+            <audio id="caballo" src="sonidos/caballo.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/cerdo.jpg" alt="cerdo">
+            <button onclick="playSound('cerdo')">¿Qué animal es?</button>
+            <audio id="cerdo" src="sonidos/cerdo.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/pato.jpg" alt="pato">
+            <button onclick="playSound('pato')">¿Qué animal es?</button>
+            <audio id="pato" src="sonidos/pato.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/gallo.jpg" alt="gallo">
+            <button onclick="playSound('gallo')">¿Qué animal es?</button>
+            <audio id="gallo" src="sonidos/gallo.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/oveja.jpg" alt="oveja">
+            <button onclick="playSound('oveja')">¿Qué animal es?</button>
+            <audio id="oveja" src="sonidos/oveja.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/burro.avif" alt="burro">
+            <button onclick="playSound('burro')">¿Qué animal es?</button>
+            <audio id="burro" src="sonidos/burro.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/perro.jpg" alt="perro">
+            <button onclick="playSound('perro')">¿Qué animal es?</button>
+            <audio id="perro" src="sonidos/perro.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/gato.jpg" alt="gato">
+            <button onclick="playSound('gato')">¿Qué animal es?</button>
+            <audio id="gato" src="sonidos/gato.mp3"></audio>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECCIÓN COLORES -->
+<section id="colores" class="seccion oculto">
+    <h2>🎨 Colores</h2>
+    <div class="contenedor">
+
+        <div class="tarjeta">
+    <img src="img/rojo.jpg" alt="Rojo">
+    <button onclick="playSound('rojo')">¿Qué color es?</button>
+    <audio id="rojo" src="sonidos/rojo.mp3"></audio>
+</div>
+
+<div class="tarjeta">
+    <img src="img/azul.jpg" alt="Azul">
+    <button onclick="playSound('azul')">¿Qué color es?</button>
+    <audio id="azul" src="sonidos/azul.mp3"></audio>
+</div>
+
+<div class="tarjeta">
+    <img src="img/amarillo.jpg" alt="Amarillo">
+    <button onclick="playSound('amarillo')">¿Qué color es?</button>
+    <audio id="amarillo" src="sonidos/amarillo.mp3"></audio>
+</div>
+
+<div class="tarjeta">
+    <img src="img/verde.avif" alt="Verde">
+    <button onclick="playSound('verde')">¿Qué color es?</button>
+    <audio id="verde" src="sonidos/verde.mp3"></audio>
+</div>
+
+<div class="tarjeta">
+    <img src="img/naranja.png" alt="Naranja">
+    <button onclick="playSound('naranja')">¿Qué color es?</button>
+    <audio id="naranja" src="sonidos/naranja.mp3"></audio>
+</div>
+
+<div class="tarjeta">
+    <img src="img/celeste.jpg" alt="Celeste">
+    <button onclick="playSound('celeste')">¿Qué color es?</button>
+    <audio id="celeste" src="sonidos/celeste.mp3"></audio>
+</div>
+
+<div class="tarjeta">
+    <img src="img/negro.png" alt="Negro">
+    <button onclick="playSound('negro')">¿Qué color es?</button>
+    <audio id="negro" src="sonidos/negro.mp3"></audio>
+</div>
+
+<div class="tarjeta">
+    <img src="img/morado.jpg" alt="Morado">
+    <button onclick="playSound('morado')">¿Qué color es?</button>
+    <audio id="morado" src="sonidos/morado.mp3"></audio>
+</div>
+
+<div class="tarjeta">
+    <img src="img/rosado.png" alt="Rosado">
+    <button onclick="playSound('rosado')">¿Qué color es?</button>
+    <audio id="rosado" src="sonidos/rosado.mp3"></audio>
+</div>
+
+<div class="tarjeta">
+    <img src="img/blanco.jpg" alt="Blanco">
+    <button onclick="playSound('blanco')">¿Qué color es?</button>
+    <audio id="blanco" src="sonidos/blanco.mp3"></audio>
+</div>
+
+    </div>
+</section>
+
+<!-- SECCIÓN FIGURAS -->
+<section id="figuras" class="seccion oculto">
+    <h2>🔷 Figuras Geométricas</h2>
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <img src="img/circulo.png" alt="Circulo">
+            <button onclick="playSound('circulo')">¿Qué figura es?</button>
+            <audio id="circulo" src="sonidos/circulo.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/cuadrado.png" alt="Cuadrado">
+            <button onclick="playSound('cuadrado')">¿Qué figura es?</button>
+            <audio id="cuadrado" src="sonidos/cuadrado.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/triangulo.png" alt="Triangulo">
+            <button onclick="playSound('triangulo')">¿Qué figura es?</button>
+            <audio id="triangulo" src="sonidos/triangulo.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/rectangulo.png" alt="Rectangulo">
+            <button onclick="playSound('rectangulo')">¿Qué figura es?</button>
+            <audio id="rectangulo" src="sonidos/rectangulo.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/estrella.png" alt="Estrella">
+            <button onclick="playSound('estrella')">¿Qué figura es?</button>
+            <audio id="estrella" src="sonidos/estrella.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/ovalo.jpg" alt="Ovalo">
+            <button onclick="playSound('ovalo')">¿Qué figura es?</button>
+            <audio id="ovalo" src="sonidos/ovalo.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/rombo.jpg" alt="Rombo">
+            <button onclick="playSound('rombo')">¿Qué figura es?</button>
+            <audio id="rombo" src="sonidos/rombo.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/pentagono.jpg" alt="Pentagono">
+            <button onclick="playSound('pentagono')">¿Qué figura es?</button>
+            <audio id="pentagono" src="sonidos/pentagono.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/hexagono.png" alt="Hexagono">
+            <button onclick="playSound('hexagono')">¿Qué figura es?</button>
+            <audio id="hexagono" src="sonidos/hexagono.mp3"></audio>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/corazon.png" alt="Corazon">
+            <button onclick="playSound('corazon')">¿Qué figura es?</button>
+            <audio id="corazon" src="sonidos/corazon.mp3"></audio>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ============================= -->
+<!-- 🌟 BLOGS RECOMENDADOS        -->
+<!-- ============================= -->
+<section id="blogs" class="seccion">
+    <h2>🌐 Blogs Recomendados</h2>
+    <div class="blog-card aula-pt">
+        <div class="blog-icon">📚</div>
+            <h3>Aula PT</h3>
+            <p>Materiales educativos, fichas imprimibles y recursos para Inicial y Primaria.</p>
+            <a class="btn-animado" href="https://www.aulapt.org/" target="_blank">Visitar Blog 🚀</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- =============================== -->
+<!-- ⭐ SISTEMA DE COMENTARIOS      -->
+<!-- =============================== -->
+<section id="comentarios" class="seccion">
+    <h2>⭐ Comentarios y Calificaciones</h2>
+    <div class="comentario-formulario">
+        <textarea id="coment-text" placeholder="Escribe tu comentario..."></textarea>
+        <label>Calificación:</label>
+        <select id="coment-stars">
+            <option value="0">0 ⭐</option>
+            <option value="1">1 ⭐</option>
+            <option value="2">2 ⭐</option>
+            <option value="3">3 ⭐</option>
+            <option value="4">4 ⭐</option>
+            <option value="5">5 ⭐</option>
+        </select>
+        <button onclick="guardarComentario()">Enviar</button>
+    </div>
+    <div id="lista-comentarios"></div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
+
